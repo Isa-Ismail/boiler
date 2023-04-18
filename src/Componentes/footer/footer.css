@@ -1,0 +1,218 @@
+﻿
+.footer {
+  /* Vou ter meus elementos dispostos em coluna*/
+  display: grid;
+  grid-area: 'footer';
+  grid-template-areas: 'top-box';
+  align-self: end;
+}
+
+.top-box {
+  display: grid;
+  grid-area: 'top-box';
+  height: 30vh;
+  width: 100%;
+  align-items: center;
+  grid-template-areas: 'logo navegue contatos';
+  grid-template-columns: 1fr 3fr 3fr;
+  box-shadow:
+    inset 0 -1px 10px rgb(255, 255, 255),
+    inset 0 1px 10px rgb(0, 0, 0);
+  font-size: 16px;
+  background-color: #a2a3a6;
+}
+
+.logoFooter {
+  height: 30vh;
+}
+
+.navegue {
+  display: grid;
+  grid-area: 'navegue';
+  justify-items:center;
+  height: 25vh;
+  border-right: solid #58595B 0.2vw;
+  grid-template-areas: 
+  'tituloNav'
+  'areaNavigation' ;
+
+}
+
+.tituloNav {
+  font-family: 'Montserrat', sans-serif;
+  color: #58595b;
+  padding-right: 8vw;
+  justify-self: center;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.areaNavigation {
+  display: grid;
+  grid-area: 'areaNavigation';
+  grid-template-areas: 'home livros usuarios';
+  grid-auto-columns: 8vw;
+  width: 30vw;
+  padding-bottom: 3vh;
+}
+
+.home {
+  text-decoration: none;
+  justify-content: center;
+  padding-left: 0.5vw;
+  padding-bottom: 0.9vw;
+  height: 2vw;
+}
+
+.livros {
+  text-decoration: none;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 0.9vw;
+  height: 2vw;
+}
+
+.usuarios {
+  text-decoration: none;
+  justify-content: center;
+  height: min-content;
+}
+
+.navigation {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  line-height: 0px;
+  color: #facdbb;
+}
+
+.navigation:hover {
+  color: #facdbb8f;
+}
+
+.contatos {
+  display: grid;
+  grid-area: 'contatos';
+  justify-items: center;
+  width: 34.5vw;
+  height: 25vh;
+  grid-template-areas: 
+    'titulo'
+    'contatosTexto';
+}
+
+.tituloCont {
+  font-family: 'Montserrat', sans-serif;
+  color: #58595b;
+  padding-right: 2vw;
+  justify-self: center;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+
+.contatosTexto {
+  display: grid;
+  grid-area: 'conatosTexto';
+  justify-items: center;
+  align-content: start;
+  grid-template-areas: 
+    'email'
+    'telefones';
+}
+
+.email {
+  display: grid;
+  grid-area: 'email';
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  line-height: 0px;
+  color: #facdbb;
+}
+
+.telefones{
+  display: grid;
+  grid-area: 'telefones';
+  justify-items: center;
+  grid-template-areas: 'telefone1 telefone2';
+}
+
+.telefone1 {
+  display: grid;
+  grid-area: 'telefone1';
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  line-height: 0px;
+  color: #facdbb;
+}
+
+.telefone2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  line-height: 0px;
+  color: #facdbb;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 540px) {
+  .top-box{
+    height: 20vh;
+    align-items: initial;
+  }
+  .logoFooter{
+    height: 18vh;
+    align-content: center;
+    margin-top: 1.5vh;
+  }
+  .navegue{
+    height: 15vh;
+    border: none;
+  }
+  .areaNavigation{
+    row-gap: 1.5vw;
+    grid-template-areas:
+    'home'
+    'livros';
+    margin-right: 5vw;
+    padding: initial;
+    justify-items: center;
+    width: max-content;
+  }
+  .navigation{
+    font-size: 3vw;
+    row-gap: 1vw;
+  }
+  .tituloNav{
+    font-size: 4vw;
+  }
+  .home{
+    border: none;
+  }
+  .livros{
+    border: none;
+  }
+  .contatos{
+    height: min-content;
+  }
+  .telefones{
+    grid-template-areas: 
+      'telefone1'
+      'telefone2';
+  }
+  .tituloCont{
+    font-size: 4vw;
+  }
+  .email{
+    font-size: 2.5vw;
+  }
+  .telefone1{
+    font-size: 2.5vw;
+  }
+  .telefone2{
+    font-size: 2.5vw;
+  }
+}
